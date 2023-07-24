@@ -21,6 +21,7 @@ namespace Bookshop
         FormCustomer formCustomer;
         FormVendor formVendor;
         FormEmployee formEmployee;
+        FormSale formSale;
 
         Rectangle orignalPnMainSize;
 
@@ -29,12 +30,13 @@ namespace Bookshop
             this.employeeId = employeeId;
             this.conn = conn;
 
+
             InitializeComponent();
         }
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
@@ -119,6 +121,27 @@ namespace Bookshop
             else
             {
                 formEmployee.BringToFront();
+            }
+        }
+
+        private void mbtnSale_Click(object sender, EventArgs e)
+        {
+            LoadFormSale();
+        }
+
+        private void LoadFormSale()
+        {
+            if (formSale == null)
+            {
+                formSale = new FormSale(employeeId, conn);
+                formSale.TopLevel = false;
+                pnMain.Controls.Add(formSale);
+                formSale.Show();
+                formSale.BringToFront();
+            }
+            else
+            {
+                formSale.BringToFront();
             }
         }
     }

@@ -288,6 +288,7 @@ namespace Bookshop
             this.mbtnSale.Text = "Sale";
             this.mbtnSale.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.mbtnSale.UseVisualStyleBackColor = false;
+            this.mbtnSale.Click += new System.EventHandler(this.mbtnSale_Click);
             // 
             // splitter1
             // 
