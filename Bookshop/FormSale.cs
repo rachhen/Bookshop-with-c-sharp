@@ -15,6 +15,7 @@ namespace Bookshop
     {
         SqlConnection conn;
         DataTable dtSaleItems;
+        DataTable dtItems;
 
         public FormSale()
         {
@@ -32,7 +33,7 @@ namespace Bookshop
             dgSaleItems.DataSource = dtSaleItems;*/
 
             string itemsSql = $"SELECT * FROM Item";
-            var dtItems = new DataTable();
+            dtItems = new DataTable();
             var adapter = new SqlDataAdapter(itemsSql, conn);
             adapter.Fill(dtItems);
 
@@ -40,12 +41,10 @@ namespace Bookshop
             combobox.DisplayMember = "ItemName";
             combobox.ValueMember = "ItemId";
             combobox.DataSource = dtItems;
-            combobox.HeaderCell.Style.Font = new Font("Roboto", 8, FontStyle.Bold);
 
-            dgSaleItems.Columns["Price"].HeaderCell.Style.Font = new Font("Roboto", 8, FontStyle.Bold);
+            dgSaleItems.Columns["Price"].DefaultCellStyle.Format = "c";
 
-            dgSaleItems.Columns["Quantity"].HeaderCell.Style.Font = new Font("Roboto", 8, FontStyle.Bold);
-            dgSaleItems.Columns["Amount"].HeaderCell.Style.Font = new Font("Roboto", 8, FontStyle.Bold);
+            dgSaleItems.Columns["Amount"].DefaultCellStyle.Format = "c";
 
         }
 
@@ -56,21 +55,43 @@ namespace Bookshop
 
         private void dgSaleItems_CurrentCellDirtyStateChanged(object sender, EventArgs e)
         {
-            if (dgSaleItems.IsCurrentCellDirty)
+            /*if (dgSaleItems.IsCurrentCellDirty)
             {
                 dgSaleItems.CommitEdit(DataGridViewDataErrorContexts.Commit);
                 dgSaleItems.EndEdit();
-            }
+            }*/
         }
 
         private void dgSaleItems_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgSaleItems.CurrentCell.ColumnIndex == 0)
+            /*if (dgSaleItems.CurrentCell.ColumnIndex == 0)
             {
                 DataGridViewComboBoxCell cb = (DataGridViewComboBoxCell)dgSaleItems.Rows[e.RowIndex].Cells[0];
+               
                 Console.WriteLine(cb.Value);
+            }*/
+        }
+
+        private void dgSaleItems_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            if (e.Control is ComboBox cb && cb != null)
+            {
+                cb.SelectedIndexChanged -= new EventHandler(ComboBox_SelectedIndexChanged);
+                cb.SelectedIndexChanged += new EventHandler(ComboBox_SelectedIndexChanged);
             }
         }
 
+        void ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox cb = (ComboBox)sender;
+
+            if (cb.SelectedIndex != -1)
+            {
+                double price = double.Parse(dtItems.Rows[cb.SelectedIndex][3].ToString());
+                dgSaleItems.CurrentRow.Cells[1].Value = price;
+                dgSaleItems.CurrentRow.Cells[2].Value = 1;
+                dgSaleItems.CurrentRow.Cells[3].Value = price * 1;
+            }
+        }
     }
 }
