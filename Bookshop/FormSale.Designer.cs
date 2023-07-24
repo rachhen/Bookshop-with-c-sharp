@@ -30,6 +30,7 @@ namespace Bookshop
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -286,53 +287,63 @@ namespace Bookshop
             // 
             // dgSaleItems
             // 
-            this.dgSaleItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgSaleItems.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgSaleItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dgSaleItems.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgSaleItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ItemId,
             this.Price,
             this.Quantity,
             this.Amount});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgSaleItems.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgSaleItems.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgSaleItems.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgSaleItems.Location = new System.Drawing.Point(0, 10);
             this.dgSaleItems.Name = "dgSaleItems";
             this.dgSaleItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgSaleItems.Size = new System.Drawing.Size(757, 217);
-            this.dgSaleItems.StandardTab = true;
             this.dgSaleItems.TabIndex = 0;
             this.dgSaleItems.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgSaleItems_CellEndEdit);
             this.dgSaleItems.CurrentCellDirtyStateChanged += new System.EventHandler(this.dgSaleItems_CurrentCellDirtyStateChanged);
+            this.dgSaleItems.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgSaleItems_EditingControlShowing);
             // 
             // ItemId
             // 
+            this.ItemId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ItemId.DataPropertyName = "ItemId";
+            this.ItemId.FillWeight = 10.7967F;
             this.ItemId.HeaderText = "Item Name";
             this.ItemId.Name = "ItemId";
             // 
             // Price
             // 
             this.Price.DataPropertyName = "Price";
+            this.Price.FillWeight = 33.39186F;
             this.Price.HeaderText = "Price";
             this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
             // 
             // Quantity
             // 
             this.Quantity.DataPropertyName = "Quantity";
+            this.Quantity.FillWeight = 152.7658F;
             this.Quantity.HeaderText = "Quantity";
             this.Quantity.Name = "Quantity";
             // 
             // Amount
             // 
             this.Amount.DataPropertyName = "Amount";
+            this.Amount.FillWeight = 203.0457F;
             this.Amount.HeaderText = "Amount";
             this.Amount.Name = "Amount";
             this.Amount.ReadOnly = true;
