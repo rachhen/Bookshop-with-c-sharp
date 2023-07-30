@@ -68,9 +68,6 @@ namespace Bookshop
             this.label2 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.dgPurchaseDetail = new System.Windows.Forms.DataGridView();
-            this.epVendor = new System.Windows.Forms.ErrorProvider(this.components);
-            this.epRefNumber = new System.Windows.Forms.ErrorProvider(this.components);
-            this.epPurchaseDetail = new System.Windows.Forms.ErrorProvider(this.components);
             this.PurchaseDetailId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PurchaseId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ItemName = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -78,6 +75,9 @@ namespace Bookshop
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.epVendor = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epRefNumber = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epPurchaseDetail = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel3.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -549,18 +549,6 @@ namespace Bookshop
             this.dgPurchaseDetail.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPurchaseDetail_CellValueChanged);
             this.dgPurchaseDetail.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgPurchaseItems_EditingControlShowing);
             // 
-            // epVendor
-            // 
-            this.epVendor.ContainerControl = this;
-            // 
-            // epRefNumber
-            // 
-            this.epRefNumber.ContainerControl = this;
-            // 
-            // epPurchaseDetail
-            // 
-            this.epPurchaseDetail.ContainerControl = this;
-            // 
             // PurchaseDetailId
             // 
             this.PurchaseDetailId.HeaderText = "PurchaseDetailId";
@@ -602,6 +590,18 @@ namespace Bookshop
             this.Amount.HeaderText = "Amount";
             this.Amount.Name = "Amount";
             this.Amount.ReadOnly = true;
+            // 
+            // epVendor
+            // 
+            this.epVendor.ContainerControl = this;
+            // 
+            // epRefNumber
+            // 
+            this.epRefNumber.ContainerControl = this;
+            // 
+            // epPurchaseDetail
+            // 
+            this.epPurchaseDetail.ContainerControl = this;
             // 
             // FormPurchase
             // 

@@ -68,16 +68,16 @@ namespace Bookshop
             this.label2 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.dgSaleDetail = new System.Windows.Forms.DataGridView();
+            this.epCustomer = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epRefNumber = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epSaleDetail = new System.Windows.Forms.ErrorProvider(this.components);
             this.SaleDetailId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SaleId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ItemName = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.epCustomer = new System.Windows.Forms.ErrorProvider(this.components);
-            this.epRefNumber = new System.Windows.Forms.ErrorProvider(this.components);
-            this.epSaleDetail = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -539,8 +539,8 @@ namespace Bookshop
             this.SaleId,
             this.ItemName,
             this.Description,
-            this.Price,
             this.Quantity,
+            this.Price,
             this.Amount});
             this.dgSaleDetail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgSaleDetail.Location = new System.Drawing.Point(0, 5);
@@ -550,6 +550,18 @@ namespace Bookshop
             this.dgSaleDetail.TabIndex = 0;
             this.dgSaleDetail.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgSaleDetail_CellValueChanged);
             this.dgSaleDetail.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgSaleItems_EditingControlShowing);
+            // 
+            // epCustomer
+            // 
+            this.epCustomer.ContainerControl = this;
+            // 
+            // epRefNumber
+            // 
+            this.epRefNumber.ContainerControl = this;
+            // 
+            // epSaleDetail
+            // 
+            this.epSaleDetail.ContainerControl = this;
             // 
             // SaleDetailId
             // 
@@ -577,33 +589,21 @@ namespace Bookshop
             this.Description.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Description.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Price
-            // 
-            this.Price.HeaderText = "Price";
-            this.Price.Name = "Price";
-            // 
             // Quantity
             // 
             this.Quantity.HeaderText = "Quantity";
             this.Quantity.Name = "Quantity";
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
             // 
             // Amount
             // 
             this.Amount.HeaderText = "Amount";
             this.Amount.Name = "Amount";
             this.Amount.ReadOnly = true;
-            // 
-            // epCustomer
-            // 
-            this.epCustomer.ContainerControl = this;
-            // 
-            // epRefNumber
-            // 
-            this.epRefNumber.ContainerControl = this;
-            // 
-            // epSaleDetail
-            // 
-            this.epSaleDetail.ContainerControl = this;
             // 
             // FormSale
             // 
@@ -695,13 +695,13 @@ namespace Bookshop
         private System.Windows.Forms.ErrorProvider epCustomer;
         private System.Windows.Forms.ErrorProvider epRefNumber;
         private System.Windows.Forms.ErrorProvider epSaleDetail;
+        private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.DataGridViewTextBoxColumn SaleDetailId;
         private System.Windows.Forms.DataGridViewTextBoxColumn SaleId;
         private System.Windows.Forms.DataGridViewComboBoxColumn ItemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
-        private System.Windows.Forms.Panel panel15;
     }
 }
