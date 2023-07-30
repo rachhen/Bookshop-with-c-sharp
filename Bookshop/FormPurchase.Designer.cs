@@ -1,7 +1,7 @@
 ﻿
 namespace Bookshop
 {
-    partial class FormSale
+    partial class FormPurchase
     {
         /// <summary>
         /// Required designer variable.
@@ -31,25 +31,17 @@ namespace Bookshop
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtRefNumber = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.txtSaleId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.dtpTxnDate = new System.Windows.Forms.DateTimePicker();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnAddCustomer = new System.Windows.Forms.Button();
+            this.btnAddVendor = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.cboCustomer = new System.Windows.Forms.ComboBox();
+            this.cboVendor = new System.Windows.Forms.ComboBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -59,6 +51,14 @@ namespace Bookshop
             this.label6 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.txtNote = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.dtpTxnDate = new System.Windows.Forms.DateTimePicker();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtRefNumber = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.btnLast = new System.Windows.Forms.Button();
@@ -67,80 +67,37 @@ namespace Bookshop
             this.btnPrevious = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.dgSaleDetail = new System.Windows.Forms.DataGridView();
-            this.SaleDetailId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SaleId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgPurchaseDetail = new System.Windows.Forms.DataGridView();
+            this.epVendor = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epRefNumber = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epPurchaseDetail = new System.Windows.Forms.ErrorProvider(this.components);
+            this.PurchaseDetailId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PurchaseId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ItemName = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.epCustomer = new System.Windows.Forms.ErrorProvider(this.components);
-            this.epRefNumber = new System.Windows.Forms.ErrorProvider(this.components);
-            this.epSaleDetail = new System.Windows.Forms.ErrorProvider(this.components);
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel14.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel13.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgSaleDetail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epCustomer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPurchaseDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epVendor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epRefNumber)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epSaleDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epPurchaseDetail)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.panel1);
-            this.panel2.Location = new System.Drawing.Point(3, 69);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(222, 48);
-            this.panel2.TabIndex = 13;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 14);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Number";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.txtRefNumber);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 18);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(222, 30);
-            this.panel1.TabIndex = 8;
-            // 
-            // txtRefNumber
-            // 
-            this.txtRefNumber.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtRefNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRefNumber.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRefNumber.Location = new System.Drawing.Point(4, 8);
-            this.txtRefNumber.Name = "txtRefNumber";
-            this.txtRefNumber.Size = new System.Drawing.Size(202, 15);
-            this.txtRefNumber.TabIndex = 0;
-            this.txtRefNumber.TextChanged += new System.EventHandler(this.txtRefNumber_TextChanged);
             // 
             // panel3
             // 
@@ -149,15 +106,15 @@ namespace Bookshop
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(12, 12);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(760, 30);
-            this.panel3.TabIndex = 14;
+            this.panel3.Size = new System.Drawing.Size(776, 30);
+            this.panel3.TabIndex = 15;
             // 
             // panel14
             // 
             this.panel14.Controls.Add(this.label7);
             this.panel14.Controls.Add(this.txtSaleId);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel14.Location = new System.Drawing.Point(585, 0);
+            this.panel14.Location = new System.Drawing.Point(601, 0);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(175, 30);
             this.panel14.TabIndex = 3;
@@ -165,11 +122,11 @@ namespace Bookshop
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(26, 8);
+            this.label7.Location = new System.Drawing.Point(5, 7);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 13);
+            this.label7.Size = new System.Drawing.Size(66, 13);
             this.label7.TabIndex = 2;
-            this.label7.Text = "Sale Id";
+            this.label7.Text = "Purchase Id";
             // 
             // txtSaleId
             // 
@@ -186,55 +143,13 @@ namespace Bookshop
             this.label1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(-3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 19);
+            this.label1.Size = new System.Drawing.Size(77, 19);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Sale";
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.label4);
-            this.panel5.Controls.Add(this.panel6);
-            this.panel5.Location = new System.Drawing.Point(3, 5);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(222, 48);
-            this.panel5.TabIndex = 33;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Margin = new System.Windows.Forms.Padding(0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 14);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Txn Date";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel6.Controls.Add(this.dtpTxnDate);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 18);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(222, 30);
-            this.panel6.TabIndex = 8;
-            // 
-            // dtpTxnDate
-            // 
-            this.dtpTxnDate.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke;
-            this.dtpTxnDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTxnDate.Location = new System.Drawing.Point(4, 5);
-            this.dtpTxnDate.Name = "dtpTxnDate";
-            this.dtpTxnDate.Size = new System.Drawing.Size(215, 21);
-            this.dtpTxnDate.TabIndex = 38;
-            this.dtpTxnDate.Value = new System.DateTime(2023, 7, 29, 20, 11, 21, 0);
+            this.label1.Text = "Purchase";
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.btnAddCustomer);
+            this.panel4.Controls.Add(this.btnAddVendor);
             this.panel4.Controls.Add(this.panel11);
             this.panel4.Controls.Add(this.panel9);
             this.panel4.Controls.Add(this.panel5);
@@ -243,22 +158,22 @@ namespace Bookshop
             this.panel4.Location = new System.Drawing.Point(12, 42);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(0, 5, 0, 20);
-            this.panel4.Size = new System.Drawing.Size(760, 204);
-            this.panel4.TabIndex = 34;
+            this.panel4.Size = new System.Drawing.Size(776, 204);
+            this.panel4.TabIndex = 35;
             // 
-            // btnAddCustomer
+            // btnAddVendor
             // 
-            this.btnAddCustomer.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAddCustomer.FlatAppearance.BorderSize = 0;
-            this.btnAddCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddCustomer.ForeColor = System.Drawing.Color.DimGray;
-            this.btnAddCustomer.Location = new System.Drawing.Point(231, 153);
-            this.btnAddCustomer.Name = "btnAddCustomer";
-            this.btnAddCustomer.Size = new System.Drawing.Size(43, 30);
-            this.btnAddCustomer.TabIndex = 37;
-            this.btnAddCustomer.Text = "Add";
-            this.btnAddCustomer.UseVisualStyleBackColor = false;
-            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
+            this.btnAddVendor.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAddVendor.FlatAppearance.BorderSize = 0;
+            this.btnAddVendor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddVendor.ForeColor = System.Drawing.Color.DimGray;
+            this.btnAddVendor.Location = new System.Drawing.Point(231, 153);
+            this.btnAddVendor.Name = "btnAddVendor";
+            this.btnAddVendor.Size = new System.Drawing.Size(43, 30);
+            this.btnAddVendor.TabIndex = 37;
+            this.btnAddVendor.Text = "Add";
+            this.btnAddVendor.UseVisualStyleBackColor = false;
+            this.btnAddVendor.Click += new System.EventHandler(this.btnAddVendor_Click);
             // 
             // panel11
             // 
@@ -278,36 +193,35 @@ namespace Bookshop
             this.label5.Location = new System.Drawing.Point(0, 0);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 14);
+            this.label5.Size = new System.Drawing.Size(46, 14);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Customer";
+            this.label5.Text = "Vendor";
             // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel12.Controls.Add(this.cboCustomer);
+            this.panel12.Controls.Add(this.cboVendor);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel12.Location = new System.Drawing.Point(0, 18);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(222, 30);
             this.panel12.TabIndex = 8;
             // 
-            // cboCustomer
+            // cboVendor
             // 
-            this.cboCustomer.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cboCustomer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboCustomer.FormattingEnabled = true;
-            this.cboCustomer.ItemHeight = 13;
-            this.cboCustomer.Items.AddRange(new object[] {
+            this.cboVendor.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cboVendor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboVendor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboVendor.FormattingEnabled = true;
+            this.cboVendor.ItemHeight = 13;
+            this.cboVendor.Items.AddRange(new object[] {
             "Male",
             "Female",
             "Other"});
-            this.cboCustomer.Location = new System.Drawing.Point(3, 5);
-            this.cboCustomer.Name = "cboCustomer";
-            this.cboCustomer.Size = new System.Drawing.Size(202, 21);
-            this.cboCustomer.TabIndex = 38;
-            this.cboCustomer.SelectedIndexChanged += new System.EventHandler(this.cboCustomer_SelectedIndexChanged);
+            this.cboVendor.Location = new System.Drawing.Point(3, 5);
+            this.cboVendor.Name = "cboVendor";
+            this.cboVendor.Size = new System.Drawing.Size(202, 21);
+            this.cboVendor.TabIndex = 38;
             // 
             // panel9
             // 
@@ -317,7 +231,7 @@ namespace Bookshop
             this.panel9.Controls.Add(this.btnNew);
             this.panel9.Controls.Add(this.panel10);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel9.Location = new System.Drawing.Point(339, 5);
+            this.panel9.Location = new System.Drawing.Point(355, 5);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(421, 179);
             this.panel9.TabIndex = 0;
@@ -427,6 +341,90 @@ namespace Bookshop
             this.txtNote.Size = new System.Drawing.Size(417, 94);
             this.txtNote.TabIndex = 0;
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Location = new System.Drawing.Point(3, 5);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(222, 48);
+            this.panel5.TabIndex = 33;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label4.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Margin = new System.Windows.Forms.Padding(0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 14);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Txn Date";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel6.Controls.Add(this.dtpTxnDate);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(0, 18);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(222, 30);
+            this.panel6.TabIndex = 8;
+            // 
+            // dtpTxnDate
+            // 
+            this.dtpTxnDate.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke;
+            this.dtpTxnDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTxnDate.Location = new System.Drawing.Point(4, 5);
+            this.dtpTxnDate.Name = "dtpTxnDate";
+            this.dtpTxnDate.Size = new System.Drawing.Size(215, 21);
+            this.dtpTxnDate.TabIndex = 38;
+            this.dtpTxnDate.Value = new System.DateTime(2023, 7, 29, 20, 11, 21, 0);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Location = new System.Drawing.Point(3, 69);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(222, 48);
+            this.panel2.TabIndex = 13;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label3.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Margin = new System.Windows.Forms.Padding(0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 14);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Number";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.txtRefNumber);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 18);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(222, 30);
+            this.panel1.TabIndex = 8;
+            // 
+            // txtRefNumber
+            // 
+            this.txtRefNumber.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtRefNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRefNumber.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRefNumber.Location = new System.Drawing.Point(4, 8);
+            this.txtRefNumber.Name = "txtRefNumber";
+            this.txtRefNumber.Size = new System.Drawing.Size(202, 15);
+            this.txtRefNumber.TabIndex = 0;
+            // 
             // panel7
             // 
             this.panel7.Controls.Add(this.panel15);
@@ -434,8 +432,8 @@ namespace Bookshop
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(12, 246);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(760, 41);
-            this.panel7.TabIndex = 35;
+            this.panel7.Size = new System.Drawing.Size(776, 41);
+            this.panel7.TabIndex = 36;
             // 
             // panel15
             // 
@@ -444,7 +442,7 @@ namespace Bookshop
             this.panel15.Controls.Add(this.btnNext);
             this.panel15.Controls.Add(this.btnPrevious);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel15.Location = new System.Drawing.Point(406, 0);
+            this.panel15.Location = new System.Drawing.Point(422, 0);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(354, 41);
             this.panel15.TabIndex = 42;
@@ -511,57 +509,69 @@ namespace Bookshop
             this.label2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(0, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 15);
+            this.label2.Size = new System.Drawing.Size(91, 15);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Sale Item";
+            this.label2.Text = "Purchase Item";
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.dgSaleDetail);
+            this.panel8.Controls.Add(this.dgPurchaseDetail);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(12, 287);
             this.panel8.Name = "panel8";
             this.panel8.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.panel8.Size = new System.Drawing.Size(760, 276);
-            this.panel8.TabIndex = 36;
+            this.panel8.Size = new System.Drawing.Size(776, 151);
+            this.panel8.TabIndex = 37;
             // 
-            // dgSaleDetail
+            // dgPurchaseDetail
             // 
-            this.dgSaleDetail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgPurchaseDetail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dgSaleDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgSaleDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SaleDetailId,
-            this.SaleId,
+            this.dgPurchaseDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgPurchaseDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PurchaseDetailId,
+            this.PurchaseId,
             this.ItemName,
             this.Description,
-            this.Price,
             this.Quantity,
+            this.Price,
             this.Amount});
-            this.dgSaleDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgSaleDetail.Location = new System.Drawing.Point(0, 5);
-            this.dgSaleDetail.Name = "dgSaleDetail";
-            this.dgSaleDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgSaleDetail.Size = new System.Drawing.Size(760, 271);
-            this.dgSaleDetail.TabIndex = 0;
-            this.dgSaleDetail.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgSaleDetail_CellValueChanged);
-            this.dgSaleDetail.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgSaleItems_EditingControlShowing);
+            this.dgPurchaseDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgPurchaseDetail.Location = new System.Drawing.Point(0, 5);
+            this.dgPurchaseDetail.Name = "dgPurchaseDetail";
+            this.dgPurchaseDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgPurchaseDetail.Size = new System.Drawing.Size(776, 146);
+            this.dgPurchaseDetail.TabIndex = 0;
+            this.dgPurchaseDetail.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPurchaseDetail_CellValueChanged);
+            this.dgPurchaseDetail.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgPurchaseItems_EditingControlShowing);
             // 
-            // SaleDetailId
+            // epVendor
             // 
-            this.SaleDetailId.HeaderText = "SaleDetailId";
-            this.SaleDetailId.Name = "SaleDetailId";
-            this.SaleDetailId.Visible = false;
+            this.epVendor.ContainerControl = this;
             // 
-            // SaleId
+            // epRefNumber
             // 
-            this.SaleId.HeaderText = "SaleId";
-            this.SaleId.Name = "SaleId";
-            this.SaleId.Visible = false;
+            this.epRefNumber.ContainerControl = this;
+            // 
+            // epPurchaseDetail
+            // 
+            this.epPurchaseDetail.ContainerControl = this;
+            // 
+            // PurchaseDetailId
+            // 
+            this.PurchaseDetailId.HeaderText = "PurchaseDetailId";
+            this.PurchaseDetailId.Name = "PurchaseDetailId";
+            this.PurchaseDetailId.Visible = false;
+            // 
+            // PurchaseId
+            // 
+            this.PurchaseId.HeaderText = "PurchaseId";
+            this.PurchaseId.Name = "PurchaseId";
+            this.PurchaseId.Visible = false;
             // 
             // ItemName
             // 
@@ -577,15 +587,15 @@ namespace Bookshop
             this.Description.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Description.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Price
-            // 
-            this.Price.HeaderText = "Price";
-            this.Price.Name = "Price";
-            // 
             // Quantity
             // 
             this.Quantity.HeaderText = "Quantity";
             this.Quantity.Name = "Quantity";
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
             // 
             // Amount
             // 
@@ -593,46 +603,27 @@ namespace Bookshop
             this.Amount.Name = "Amount";
             this.Amount.ReadOnly = true;
             // 
-            // epCustomer
-            // 
-            this.epCustomer.ContainerControl = this;
-            // 
-            // epRefNumber
-            // 
-            this.epRefNumber.ContainerControl = this;
-            // 
-            // epSaleDetail
-            // 
-            this.epSaleDetail.ContainerControl = this;
-            // 
-            // FormSale
+            // FormPurchase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(784, 575);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormSale";
+            this.Name = "FormPurchase";
             this.Padding = new System.Windows.Forms.Padding(12);
-            this.Text = "FormSale";
+            this.Text = "FormPurchase";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.FormSale_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Load += new System.EventHandler(this.FormPurchase_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
@@ -642,66 +633,73 @@ namespace Bookshop
             this.panel10.PerformLayout();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel15.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgSaleDetail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epCustomer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPurchaseDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epVendor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epRefNumber)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epSaleDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epPurchaseDetail)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtRefNumber;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtSaleId;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.DateTimePicker dtpTxnDate;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.DataGridView dgSaleDetail;
+        private System.Windows.Forms.Button btnAddVendor;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.ComboBox cboVendor;
         private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.TextBox txtNote;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.ComboBox cboCustomer;
-        private System.Windows.Forms.Button btnNew;
-        private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtSaleId;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Button btnAddCustomer;
-        private System.Windows.Forms.Button btnFirst;
-        private System.Windows.Forms.Button btnPrevious;
-        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.DateTimePicker dtpTxnDate;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtRefNumber;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Button btnLast;
-        private System.Windows.Forms.ErrorProvider epCustomer;
+        private System.Windows.Forms.Button btnFirst;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Button btnPrevious;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.DataGridView dgPurchaseDetail;
+        private System.Windows.Forms.ErrorProvider epVendor;
         private System.Windows.Forms.ErrorProvider epRefNumber;
-        private System.Windows.Forms.ErrorProvider epSaleDetail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SaleDetailId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SaleId;
+        private System.Windows.Forms.ErrorProvider epPurchaseDetail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PurchaseDetailId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PurchaseId;
         private System.Windows.Forms.DataGridViewComboBoxColumn ItemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
-        private System.Windows.Forms.Panel panel15;
     }
 }

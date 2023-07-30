@@ -205,6 +205,7 @@ namespace Bookshop
             this.mbtnPurchase.Text = "Purchase";
             this.mbtnPurchase.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.mbtnPurchase.UseVisualStyleBackColor = false;
+            this.mbtnPurchase.Click += new System.EventHandler(this.mbtnPurchase_Click);
             // 
             // panel6
             // 

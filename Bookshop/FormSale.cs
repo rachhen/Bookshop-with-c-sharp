@@ -173,8 +173,8 @@ namespace Bookshop
                 double.TryParse(dtItemList.Rows[cb.SelectedIndex][3].ToString(), out double price);
 
                 dgSaleDetail.CurrentRow.Cells[3].Value = dtItemList.Rows[cb.SelectedIndex][2].ToString();
-                dgSaleDetail.CurrentRow.Cells[4].Value = price;
-                dgSaleDetail.CurrentRow.Cells[5].Value = 1;
+                dgSaleDetail.CurrentRow.Cells[4].Value = 1;
+                dgSaleDetail.CurrentRow.Cells[5].Value = price;
                 dgSaleDetail.CurrentRow.Cells[6].Value = price * 1;
             }
         }

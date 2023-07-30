@@ -22,6 +22,7 @@ namespace Bookshop
         FormVendor formVendor;
         FormEmployee formEmployee;
         FormSale formSale;
+        FormPurchase formPurchase;
 
         Rectangle orignalPnMainSize;
 
@@ -142,6 +143,22 @@ namespace Bookshop
             else
             {
                 formSale.BringToFront();
+            }
+        }
+
+        private void mbtnPurchase_Click(object sender, EventArgs e)
+        {
+            if (formPurchase == null)
+            {
+                formPurchase = new FormPurchase(employeeId, conn);
+                formPurchase.TopLevel = false;
+                pnMain.Controls.Add(formPurchase);
+                formPurchase.Show();
+                formPurchase.BringToFront();
+            }
+            else
+            {
+                formPurchase.BringToFront();
             }
         }
     }
