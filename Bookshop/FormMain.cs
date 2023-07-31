@@ -23,6 +23,7 @@ namespace Bookshop
         FormEmployee formEmployee;
         FormSale formSale;
         FormPurchase formPurchase;
+        FormAdjustment formAdjustment;
 
         Rectangle orignalPnMainSize;
 
@@ -159,6 +160,22 @@ namespace Bookshop
             else
             {
                 formPurchase.BringToFront();
+            }
+        }
+
+        private void mbtnAdjustment_Click(object sender, EventArgs e)
+        {
+            if (formAdjustment == null)
+            {
+                formAdjustment = new FormAdjustment(employeeId, conn);
+                formAdjustment.TopLevel = false;
+                pnMain.Controls.Add(formAdjustment);
+                formAdjustment.Show();
+                formAdjustment.BringToFront();
+            }
+            else
+            {
+                formAdjustment.BringToFront();
             }
         }
     }

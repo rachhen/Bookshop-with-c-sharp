@@ -31,10 +31,6 @@ namespace Bookshop
 
         private void FormPurchase_Load(object sender, EventArgs e)
         {
-            conn = new SqlConnection();
-            conn.ConnectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=bookshop;User Id=sa;Password=123;";
-            conn.Open();
-
             LoadVendorList();
             LoadPurchaseData();
         }
@@ -328,13 +324,13 @@ namespace Bookshop
                         $"{cboVendor.SelectedValue},{employeeId}," +
                         $"'{txtNote.Text}')";
 
-                SqlCommand cmdSale = new SqlCommand(sql, conn);
-                string saleid = cmdSale.ExecuteScalar().ToString();
+                SqlCommand cmdPurchase = new SqlCommand(sql, conn);
+                string purchaseId = cmdPurchase.ExecuteScalar().ToString();
 
                 foreach (DataRow row in dtPurchaseDetail.Rows)
                 {
                     sql = "INSERT INTO PurchaseDetail(PurchaseId,ItemId,Description,Quantity,Price) " +
-                        $"VALUES({saleid},{row["ItemId"]}," +
+                        $"VALUES({purchaseId},{row["ItemId"]}," +
                         $"'{row["Description"]}',{row["Quantity"]}," +
                         $"{row["Price"]})";
 
@@ -367,8 +363,8 @@ namespace Bookshop
                     $"Note='{txtNote.Text}' " +
                     $"WHERE PurchaseId={purchaseId} ";
 
-                SqlCommand cmdSale = new SqlCommand(sql, conn);
-                cmdSale.ExecuteNonQuery();
+                SqlCommand cmdPurchase = new SqlCommand(sql, conn);
+                cmdPurchase.ExecuteNonQuery();
 
                 foreach (DataRow row in dtPurchaseDetail.Rows)
                 {
@@ -391,8 +387,8 @@ namespace Bookshop
                             $"WHERE PurchaseDetailId={purchaseDetailId}";
                     }
 
-                    SqlCommand cmdSaleDetail = new SqlCommand(sql, conn);
-                    cmdSaleDetail.ExecuteNonQuery();
+                    SqlCommand cmdPurchaseDetail = new SqlCommand(sql, conn);
+                    cmdPurchaseDetail.ExecuteNonQuery();
                 }
                 MessageBox.Show("Purchase has updated successfully");
             }
@@ -400,6 +396,16 @@ namespace Bookshop
             {
                 MessageBox.Show($"An error occur: {ex.Message}", ex.Source, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void txtRefNumber_TextChanged(object sender, EventArgs e)
+        {
+            epRefNumber.Clear();
+        }
+
+        private void cboVendor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            epVendor.Clear();
         }
     }
 }

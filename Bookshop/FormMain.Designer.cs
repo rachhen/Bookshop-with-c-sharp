@@ -150,6 +150,7 @@ namespace Bookshop
             this.mbtnAdjustment.Text = "Adjustment";
             this.mbtnAdjustment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.mbtnAdjustment.UseVisualStyleBackColor = false;
+            this.mbtnAdjustment.Click += new System.EventHandler(this.mbtnAdjustment_Click);
             // 
             // panel8
             // 

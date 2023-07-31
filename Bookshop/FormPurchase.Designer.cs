@@ -30,7 +30,7 @@ namespace Bookshop
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -222,6 +222,7 @@ namespace Bookshop
             this.cboVendor.Name = "cboVendor";
             this.cboVendor.Size = new System.Drawing.Size(202, 21);
             this.cboVendor.TabIndex = 38;
+            this.cboVendor.SelectedIndexChanged += new System.EventHandler(this.cboVendor_SelectedIndexChanged);
             // 
             // panel9
             // 
@@ -424,6 +425,7 @@ namespace Bookshop
             this.txtRefNumber.Name = "txtRefNumber";
             this.txtRefNumber.Size = new System.Drawing.Size(202, 15);
             this.txtRefNumber.TabIndex = 0;
+            this.txtRefNumber.TextChanged += new System.EventHandler(this.txtRefNumber_TextChanged);
             // 
             // panel7
             // 
@@ -526,12 +528,12 @@ namespace Bookshop
             // dgPurchaseDetail
             // 
             this.dgPurchaseDetail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dgPurchaseDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dgPurchaseDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgPurchaseDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PurchaseDetailId,
             this.PurchaseId,
