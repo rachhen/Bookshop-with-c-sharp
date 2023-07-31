@@ -311,7 +311,7 @@ namespace Bookshop
                             $"AdjustmentId={adjustmentId}," +
                             $"ItemId={row["ItemId"]}," +
                             $"Description='{row["Description"]}'," +
-                            $"Quantity={row["Quantity"]}," +
+                            $"Quantity={row["Quantity"]} " +
                             $"WHERE AdjustmentDetailId={adjustmentDetailId}";
                     }
 
