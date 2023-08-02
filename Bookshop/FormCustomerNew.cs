@@ -52,10 +52,18 @@ namespace Bookshop
 
             try
             {
-                string sql = $"INSERT INTO Customer(CustomerName, CompanyName, Phone, Email, Address) " +
-                    $"VALUES('{txtName.Text}', '{txtCompany.Text}', '{txtPhone.Text}', '{txtEmail.Text}', '{txtAddress.Text}')";
+                //string sql = $"INSERT INTO Customer(CustomerName, CompanyName, Phone, Email, Address) " +
+                //    $"VALUES('{txtName.Text}', '{txtCompany.Text}', '{txtPhone.Text}', '{txtEmail.Text}', '{txtAddress.Text}')";
 
-                SqlCommand command = new SqlCommand(sql, conn);
+                SqlCommand command = new SqlCommand("CreateCustomer", conn);
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.Add("@customerName", SqlDbType.NVarChar).Value = txtName.Text.Trim();
+                command.Parameters.Add("@companyName", SqlDbType.NVarChar).Value = txtCompany.Text.Trim();
+                command.Parameters.Add("@phone", SqlDbType.VarChar).Value = txtPhone.Text.Trim();
+                command.Parameters.Add("@email", SqlDbType.VarChar).Value = txtEmail.Text.Trim();
+                command.Parameters.Add("@address", SqlDbType.VarChar).Value = txtAddress.Text.Trim();
+
                 command.ExecuteNonQuery();
 
                 return true;
